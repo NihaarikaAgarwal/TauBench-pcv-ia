@@ -411,21 +411,6 @@ End + Calculate Reward
 
 ---
 
-## Citation
-
-If you use PCV-IA in your research, please cite:
-
-```bibtex
-@misc{pcvia2024,
-  title={PCV-IA: Pre-Commit Validation with Irreversibility Awareness for Tool-Using Agents},
-  author={[Your Name]},
-  year={2024},
-  note={Implementation for tau-bench error prevention}
-}
-```
-
----
-
 ## Further Reading
 
 - **tau-bench GitHub:** https://github.com/sierra-research/tau-bench
@@ -433,12 +418,3 @@ If you use PCV-IA in your research, please cite:
 - **tau²-bench Paper:** https://arxiv.org/abs/2506.07982
 - **Validation Framework:** See `tau_bench/agents/validation_framework.py`
 
----
-
-## Support
-
-For issues or questions:
-1. Check the troubleshooting section above
-2. Review validation stats in result files
-3. Check logs in `./logs/pcv_ia_experiments/`
-4. Run with sample tasks first before full benchmark
