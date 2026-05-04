@@ -275,33 +275,6 @@ Use the built-in comparison script:
 python logs/pcv_ia_experiments/compare_strategies.py results/pcv_ia_experiments/
 ```
 
-This outputs:
-```
-================================================================================
-STRATEGY COMPARISON
-================================================================================
-
-Strategy: TOOL-CALLING
-  Total Tasks: 10
-  Passed: 6
-  Failed: 4
-  Success Rate: 60.00%
-
-Strategy: PCV-IA
-  Total Tasks: 10
-  Passed: 9
-  Failed: 1
-  Success Rate: 90.00%
-
-================================================================================
-Interpretation:
-  - Higher success rate = better error prevention
-  - PCV-IA should show improvement over tool-calling baseline
-================================================================================
-```
-
----
-
 ## Advanced Usage
 
 ### Custom Validation Temperature
@@ -341,27 +314,6 @@ python run.py \
   --task-ids 0 1 2 3 4 5 \
   ...
 ```
-
----
-
-## Expected Improvements
-
-PCV-IA should improve over baseline:
-
-### Error Prevention Rates (Expected)
-
-| Error | Baseline | PCV-IA | Improvement |
-|-------|----------|--------|-------------|
-| E1: Incomplete Goal | 20% | 5% | -75% |
-| E2: Wrong Tool | 15% | 2% | -87% |
-| E3: Bad Arguments | 25% | 8% | -68% |
-| E4: Memory Loss | 10% | 3% | -70% |
-| E5: Policy Violation | 5% | 1% | -80% |
-| E6: Clarification Fail | 20% | 5% | -75% |
-| E7: Output Misread | 8% | 3% | -63% |
-| E8: Wrong Sequence | 12% | 2% | -83% |
-
-**Overall Expected:** 15-30% improvement in success rate
 
 ---
 
