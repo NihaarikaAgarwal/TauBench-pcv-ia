@@ -1,0 +1,15 @@
+#Run result artifacts
+results/**
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+venv/
+
+# OS files
+.DS_Store
+
+# Log files
+*.log
