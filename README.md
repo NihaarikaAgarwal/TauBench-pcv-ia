@@ -28,6 +28,23 @@ PCV-IA implements **6-stage pre-action validation** that prevents all 8 error ca
 
 ---
 
+## Error Categories
+
+The 8 error categories that PCV-IA is designed to prevent:
+
+| Error | Description |
+|-------|-------------|
+| **E1: Goal Incomplete / Premature Termination** | Agent ends before fully satisfying the user request (missing final confirmation or required action). |
+| **E2: Incorrect Tool Selection** | Agent calls the wrong tool/API for the intended operation. |
+| **E3: Incorrect Tool Arguments / Schema Error** | Correct tool chosen but arguments are missing, malformed, or incorrect (IDs, fields, formats). |
+| **E4: State Tracking / Memory Failure** | Agent forgets or contradicts previously provided information across turns. |
+| **E5: Policy / Constraint Violation** | Agent violates domain constraints (eligibility windows, refund/exchange rules, restricted actions). |
+| **E6: Clarification Failure** | Agent fails to request required information or asks irrelevant questions that derail progress. |
+| **E7: Tool Outcome Misinterpretation** | Agent misreads tool output (treats error as success, ignores 'not found', etc.). |
+| **E8: Sequencing / Planning Error** | Agent performs steps in wrong order or skips required intermediate steps. |
+
+---
+
 ## Implementation Files
 
 ### Core Components
